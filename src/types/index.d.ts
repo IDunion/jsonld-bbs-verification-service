@@ -14,6 +14,8 @@
 
 declare module "jsonld-signatures";
 
+declare module "@digitalbazaar/vc"
+
 declare module "jsonld";
 
 declare module "*.json" {

@@ -1,6 +1,7 @@
 {
-    "id": "did:example:489398593#test",
-    "controller": "did:example:489398593",
-    "privateKeyBase58": "5D6Pa8dSwApdnfg7EZR8WnGfvLDCZPZGsZ5Y1ELL9VDj",
-    "publicKeyBase58": "oqpWYKaZD9M1Kbe94BVXpr8WTdFBNZyKv48cziTiQUeuhm7sBhCABMyYG4kcMrseC68YTFFgyhiNeBKjzdKk9MiRWuLv5H4FFujQsQK2KTAtzU8qTBiZqBHMmnLF4PL7Ytu"
-  }
+  "id": "did:key:zUC71tQakpP8J3N9JbtqXqmVdQf771pTdrcuDJSssqD4wEajisGEMfF4P8qpJDbVapSfgmpwZ5gKxvsgJk3PCKLeA1bWBWs2wSrz2bMCfZkTAftdkKJeBCHpWbZTJ6SzoSwM8pB#zUC71tQakpP8J3N9JbtqXqmVdQf771pTdrcuDJSssqD4wEajisGEMfF4P8qpJDbVapSfgmpwZ5gKxvsgJk3PCKLeA1bWBWs2wSrz2bMCfZkTAftdkKJeBCHpWbZTJ6SzoSwM8pB",
+  "type": "Bls12381G2Key2020",
+  "controller": "did:key:zUC71tQakpP8J3N9JbtqXqmVdQf771pTdrcuDJSssqD4wEajisGEMfF4P8qpJDbVapSfgmpwZ5gKxvsgJk3PCKLeA1bWBWs2wSrz2bMCfZkTAftdkKJeBCHpWbZTJ6SzoSwM8pB",
+  "publicKeyBase58": "n3rhh8itwRVvtfDzMu5HL7JBrjWFbt4yLus4PykGCMDwKGJbezquagt99EFF4Wu2YZR4WfpWb3KiMsKG33zvL44nPAxvyojVkweomM7agikmPQy36G7iLo9Upui7DtnUeCs",
+  "privateKeyBase58": "5r21ekPoFb7GeP2Fi25hiycXbSUHiF3CMPRnAwKG5Skw"
+}

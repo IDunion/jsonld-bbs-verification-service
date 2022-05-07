@@ -2,17 +2,23 @@
   "name": "yes-jsonld-bbs",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "demo": "ts-node --files lib/index.js"
+    "build": "tsc -p ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.1",
     "@types/node": "12.7.2",
+    "pino-pretty": "^7.6.1",
     "ts-node": "8.4.1"
   },
   "dependencies": {
-    "@mattrglobal/jsonld-signatures-bbs": "^1.0.1"
+    "@digitalbazaar/vc": "^2.1.0",
+    "@mattrglobal/jsonld-signatures-bbs": "^1.0.1",
+    "express": "^4.17.1",
+    "pino": "^7.11.0",
+    "pino-http": "^7.0.0"
   }
 }
