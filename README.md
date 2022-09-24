@@ -1,3 +1,10 @@
+# Description
+
+This project is a server that verifies JSON-LD BBS+ credentials. 
+The credential is sent via a POST request to the ``/w3c/verification`` endpoint. 
+This endpoint is protected by a bearer token that can be configured via environment variables. 
+The server uses the Mattr [jsonld-signatures-bbs](https://github.com/mattrglobal/jsonld-signatures-bbs) library to verify BBS+ credentials.
+
 # Run with Docker
 
 - ``docker build -t verification-service .``
