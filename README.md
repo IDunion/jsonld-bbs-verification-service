@@ -16,3 +16,9 @@
 # Development
 
 - Command ``npx tsc && node dist/index.js | node_modules/.bin/pino-pretty``
+
+# Run Test Script
+
+- ``npx tsc`` 
+- [``npx tsc --resolveJsonModule --esModuleInterop src/credential-creation-verification.ts``]
+- ``node src/credential-creation-verification.js``
