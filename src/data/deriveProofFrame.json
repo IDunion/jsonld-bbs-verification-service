@@ -4,12 +4,11 @@
       "https://w3id.org/citizenship/v1",
       "https://w3id.org/security/bbs/v1"
     ],
-    "type": ["VerifiableCredential", "PermanentResidentCard"],
+    "type": ["VerifiableCredential", "https://agents.labor.gematik.de/credentials#NextcloudCredential"],
     "credentialSubject": {
       "@explicit": true,
-      "type": ["PermanentResident", "Person"],
+      "type": ["https://agents.labor.gematik.de/credentials#NextcloudCredential"],
       "givenName": {},
-      "familyName": {},
-      "gender": {}
+      "familyName": {}
     }
   }

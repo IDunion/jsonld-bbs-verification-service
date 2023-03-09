@@ -10,13 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.1",
-    "@types/node": "12.7.2",
+    "@types/node": "^17.0.29",
     "pino-pretty": "^7.6.1",
     "ts-node": "8.4.1"
   },
   "dependencies": {
     "@digitalbazaar/vc": "^2.1.0",
-    "@mattrglobal/jsonld-signatures-bbs": "^1.0.1",
+    "@mattrglobal/jsonld-signatures-bbs": "^1.1.2",
     "express": "^4.17.1",
     "pino": "^7.11.0",
     "pino-http": "^7.0.0"

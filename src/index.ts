@@ -82,16 +82,16 @@ const customDocLoader = async (url: string): Promise<any> => {
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 const documentLoader: any = extendContextLoader(customDocLoader);
 
-const main = async (credential: object): Promise<Boolean> => {
+const main = async (body: any): Promise<Boolean> => {
 
   // Remove presentation_submission because it is not signed
-  const credentialPrepared = { ...credential }  as Partial<any>;
+  const credentialPrepared = { ...body.credential }  as Partial<any>;
   delete credentialPrepared.presentation_submission;
 
   //Verify the presentation
   let verifiedPresentation = await verify(credentialPrepared, {
     suite: new BbsBlsSignature2020(),
-    purpose: new purposes.AuthenticationProofPurpose({challenge: credentialPrepared.proof.challenge}),
+    purpose: new purposes.AuthenticationProofPurpose({challenge: body.challenge}),
     documentLoader
   });
 
@@ -99,7 +99,7 @@ const main = async (credential: object): Promise<Boolean> => {
 
   //Verify the credential
   let verifiedCredential = await verify(credentialPrepared.verifiableCredential[0], {
-    suite: new BbsBlsSignatureProof2020(),
+    suite: new BbsBlsSignature2020(),
     purpose: new purposes.AssertionProofPurpose(),
     documentLoader
   });

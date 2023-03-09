@@ -28,4 +28,4 @@ The server uses the Mattr [jsonld-signatures-bbs](https://github.com/mattrglobal
 
 - ``npx tsc`` 
 - [``npx tsc --resolveJsonModule --esModuleInterop src/credential-creation-verification.ts``]
-- ``node src/credential-creation-verification.js``
+- ``node dist/credential-creation-verification.js``

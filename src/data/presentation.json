@@ -1,0 +1,42 @@
+{
+    "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/bbs/v1"
+    ],
+    "type": [
+        "VerifiablePresentation"
+    ],
+    "verifiableCredential": [
+      {
+        "@context": [
+          "https://www.w3.org/2018/credentials/v1",
+          "https://w3id.org/citizenship/v1",
+          "https://w3id.org/security/bbs/v1"
+        ],
+        "id": "urn:bnid:_:12345",
+        "type": [
+          "VerifiableCredential",
+          "https://agents.labor.gematik.de/credentials#NextcloudCredential"
+        ],
+        "issuer": "did:key:zUC71tQakpP8J3N9JbtqXqmVdQf771pTdrcuDJSssqD4wEajisGEMfF4P8qpJDbVapSfgmpwZ5gKxvsgJk3PCKLeA1bWBWs2wSrz2bMCfZkTAftdkKJeBCHpWbZTJ6SzoSwM8pB",
+        "issuanceDate": "2019-12-03T12:19:52Z",
+        "expirationDate": "2029-12-03T12:19:52Z",
+        "credentialSubject": {
+          "id": "did:example:b34ca6cd37bbf23",
+          "type": [
+            "NextcloudCredential"
+          ],
+          "email": "alice@example.com",
+          "givenName": "Alice",
+          "familyName": "Wonderland"
+        },
+        "proof": {
+          "type": "BbsBlsSignature2020",
+          "created": "2023-03-09T13:47:26Z",
+          "proofPurpose": "assertionMethod",
+          "proofValue": "jJm7O+LU+AERIHLOU+Vr7AMJQfYunrYLtXE3HvwuaowzRsCL9SIYjmD5NkVJwfKXYUHlKfzccE4m7waZyoLEkBLFiK2g54Q2i+CdtYBgDdkUDsoULSBMcH1MwGHwdjfXpldFNFrHFx/IAvLVniyeMQ==",
+          "verificationMethod": "did:key:zUC71tQakpP8J3N9JbtqXqmVdQf771pTdrcuDJSssqD4wEajisGEMfF4P8qpJDbVapSfgmpwZ5gKxvsgJk3PCKLeA1bWBWs2wSrz2bMCfZkTAftdkKJeBCHpWbZTJ6SzoSwM8pB#zUC71tQakpP8J3N9JbtqXqmVdQf771pTdrcuDJSssqD4wEajisGEMfF4P8qpJDbVapSfgmpwZ5gKxvsgJk3PCKLeA1bWBWs2wSrz2bMCfZkTAftdkKJeBCHpWbZTJ6SzoSwM8pB"
+        }
+      }
+    ]
+}

@@ -18,6 +18,11 @@ declare module "@digitalbazaar/vc"
 
 declare module "jsonld";
 
+interface WindowOrWorkerGlobalScope {
+  structuredClone(value: any, options?: StructuredSerializeOptions): any;
+}
+declare function structuredClone( value: any, options?: StructuredSerializeOptions): any;
+
 declare module "*.json" {
   const value: any;
   export default value;

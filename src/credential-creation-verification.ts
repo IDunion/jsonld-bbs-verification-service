@@ -6,8 +6,6 @@ import {
   } from "@mattrglobal/jsonld-signatures-bbs";
 import { extendContextLoader, sign, verify, purposes } from "jsonld-signatures";
 
-import vc from '@digitalbazaar/vc';
-
 import { defaultRandomSource } from "@stablelib/random"
 
 import inputDocument from "./data/inputDocument.json";
@@ -19,6 +17,7 @@ import citizenVocab from "./data/citizenVocab.json";
 import credentialContext from "./data/credentialsContext.json";
 import proofContext from "./data/proofContext.json";
 import didContext from "./data/didContext.json";
+import presentationDocument from "./data/presentation.json";
 
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 const documents: any = {
@@ -108,7 +107,8 @@ const main = async (): Promise<void> => {
   const derivedProof = await deriveProof(signedDocument, revealDocument, {
     suite: new BbsBlsSignatureProof2020(),
     documentLoader: documentLoader,
-    nonce: defaultRandomSource.randomBytes(50)
+    nonce: defaultRandomSource.randomBytes(50),
+    skipProofCompaction: true
   });
 
   console.log("Derived proof");
@@ -126,15 +126,31 @@ const main = async (): Promise<void> => {
   console.log(JSON.stringify(verified, null, 2));
   console.log();
 
-  const id = '1234';
-  const holder = 'aaaa';
-  const verifiableCredentials = [derivedProof];
-  const presentation = vc.createPresentation({
-    verifiableCredentials, id, holder
+  // Create BBS+ signed presentation with credential
+
+  //let presentationAndCredential = structuredClone(presentationDocument);
+  //presentationAndCredential = presentationAndCredential.verifiableCredential.push(derivedProof);
+
+  const presentation = await sign(presentationDocument, {
+    suite: new BbsBlsSignature2020({ key: keyPair }),
+    purpose: new purposes.AuthenticationProofPurpose({ challenge: "challenge"}),
+    documentLoader
   });
 
   console.log("Verifiable Presentation");
   console.log(JSON.stringify(presentation, null, 2));
+  console.log();
+
+  // Verify presentation
+  verified = await verify(presentation, {
+    suite: new BbsBlsSignature2020(),
+    purpose: new purposes.AuthenticationProofPurpose({ challenge: "challenge"}),
+    documentLoader
+  });
+
+  console.log("Verification result");
+  console.log(JSON.stringify(verified, null, 2));
+  console.log();
 };
 
 main();
