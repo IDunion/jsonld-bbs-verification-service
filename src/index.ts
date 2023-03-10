@@ -99,7 +99,7 @@ const main = async (body: any): Promise<Boolean> => {
 
   //Verify the credential
   let verifiedCredential = await verify(credentialPrepared.verifiableCredential[0], {
-    suite: new BbsBlsSignature2020(),
+    suite: new BbsBlsSignatureProof2020(),
     purpose: new purposes.AssertionProofPurpose(),
     documentLoader
   });
