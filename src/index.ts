@@ -17,6 +17,7 @@ import citizenVocab from "./data/citizenVocab.json";
 import credentialContext from "./data/credentialsContext.json";
 import proofContext from "./data/proofContext.json";
 import didContext from "./data/didContext.json";
+import nextcloudContext from "./data/nextcloudContext.json";
 
 const logger = pino({ level: process.env.LOG_LEVEL || 'info' });
 
@@ -28,7 +29,8 @@ const documents: any = {
     "https://w3id.org/citizenship/v1": citizenVocab,
     "https://www.w3.org/2018/credentials/v1": credentialContext,
     "https://w3id.org/security/suites/jws-2020/v1": proofContext,
-    "https://www.w3.org/ns/did/v1": didContext
+    "https://www.w3.org/ns/did/v1": didContext,
+    "https://agents.labor.gematik.de/credential/nextcloudCredential": nextcloudContext,
   };
   
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
